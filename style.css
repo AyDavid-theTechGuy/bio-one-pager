@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     padding: 0;
@@ -100,6 +104,28 @@ header .rt a:hover {
     border-radius: 8px;
 }
 
+@media screen and (max-width: 767px) {
+    .hero {
+        padding-left: 32px;
+        padding-right: 32px;
+        flex-direction: column-reverse;
+    }
+    .hero .lt,
+    .hero .rt {
+        width: 100%;
+    }
+    .hero .lt {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+}
+
+@media screen and (max-width: 412px) {
+    .hero .rt img {
+        width: 280px;
+    }
+}
+
 /* LEARN */
 .learn {
     background-color: #f0f0ff;
@@ -128,6 +154,22 @@ header .rt a:hover {
     border-radius: 8px;
     padding: 12px;
     margin: auto;
+}
+
+@media screen and (max-width: 1024px) {
+    .learn .cards-div .card {
+        width: 240px;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    .learn .cards-div {
+        flex-direction: column;
+    }
+
+    .learn .cards-div .card {
+        margin-bottom: 24px;
+    }
 }
 
 .learn .cards-div .card .material-symbols-outlined {
@@ -179,10 +221,24 @@ header .rt a:hover {
 }
 
 .more .div-flex .rt .tag {
+    display: inline-block;
     background-color: #00008b;
     color: #fff;
     border-radius: 5px;
     padding: 2px 7px;
+    margin-top: 5px;
+}
+
+@media screen and (max-width: 767px) {
+    .more .div-flex {
+        padding-left: 32px;
+        padding-right: 32px;
+        flex-direction: column;
+    }
+    .more .div-flex .lt,
+    .more .div-flex .rt {
+        width: 100%;
+    }
 }
 
 /* CONTACT */
